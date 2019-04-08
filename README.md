@@ -9,5 +9,5 @@ I was looking at leaflet.js and Google Map API, in the end I decided to go with 
 
 In this project I learnt about thinking React such as making most of the component usable like I did with the search bar and play bar. 
 
-![alt text](https://github.com/Jcct100/PolyNation.git/PolyNation/image/filter.png)
+![alt text](https://github.com/Jcct100/PolyNation.git/image/filter.png)
 

@@ -1,0 +1,78 @@
+// Default styles that apply to generic HTML tags and classes
+// E.g. headings (h1, h2...), basic element tags (a, p)
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+
+    font-family: $font-body;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: color('white');
+}
+
+// React toggle
+.react-toggle {
+    &-track {
+        background-color: color('grey-900');
+        box-shadow: inset 0 .063em .188em rgba(0, 0, 0, .5);
+    }
+
+    &-thumb {
+        background-color: $off-filter-toggle;
+        border-color: $off-filter-toggle;
+        transform: scale3d(.85, .85, .85);
+    }
+
+    &--checked {
+        .react-toggle-thumb {
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+        }
+
+        .react-toggle-track {
+            background-color: color('grey-900');
+        }
+    }
+
+    &:hover:not(&--disabled) &-track {
+        background-color: color('grey-900');
+    }
+
+    &--focus &-thumb,
+    &:active:not(&--disabled) &-thumb {
+        box-shadow: none;
+    }
+
+    &-track-check {
+        padding-top: 5px;
+        left: 5px;
+
+        font-size: 80%;
+        color: $off-filter-toggle;
+    }
+
+    &-track-x {
+        padding-top: 5px;
+
+        font-size: 80%;
+        color: $off-filter-toggle;
+    }
+
+    &:hover &-track-x,
+    &:hover &-track-check {
+        transition: opacity .25s ease, color .3s ease-in-out;
+
+        color: color('white');
+    }
+}

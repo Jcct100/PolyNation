@@ -1,0 +1,101 @@
+.playbar-container {
+    padding: 10px;
+    display: flex;
+    background-color: $playbar;
+}
+
+.artist {
+    display: flex;
+    align-items: center;
+    flex-basis: 25%;
+
+    &-image-wrapper {
+        margin: 0 1rem;
+    }
+
+    &-info {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    &-image {
+        flex-direction: row;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+
+        &[src=''] {
+            visibility: hidden;
+        }
+    }
+
+    &-info-title {
+        text-decoration: none;
+        color: color('white');
+        margin: 0;
+    }
+
+    &-info-subtitle {
+        text-decoration: none;
+        color: color('white');
+        margin: 0;
+    }
+}
+
+.audio {
+    display: flex;
+    align-items: center;
+    flex-basis: 10%;
+
+    &-speakericon {
+        flex-direction: column;
+        font-size: .5rem;
+        flex-basis: 30%;
+    }
+
+    &-inputrange {
+        flex-basis: 70%;
+        height: 5%;
+        width: 100%;
+        position: relative;
+
+        &-outerStyle {
+            background-color: color('white');
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.audio-wave {
+    position: relative;
+    width: 55%;
+}
+
+.audio-player {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 65%;
+
+    &-play-button {
+        margin-right: 2rem;
+    }
+}
+
+input[type='range'] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    border: none;
+}
+
+input[type='range']:focus {
+    outline: none;
+}

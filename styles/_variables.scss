@@ -1,0 +1,67 @@
+// Colours
+$theme-colors: (
+    'white': #fff,
+    'black': #222,
+    'purple': #8a12f4,
+    'cyan': #1a8ead,
+    'pink': #ed4386,
+    'lilac': #c155ec,
+    'light-blue': #3491a3,
+    'light-pink': #e547ff,
+    'light-green': #42db77,
+    'midnight-blue': #002739,
+    'grey-900': #121b1f,
+    'grey-800': #162025,
+    'grey-700': #1a262c,
+    'grey-500': #343434,
+    'grey-300': #495155,
+    'grey-100': #d3d3d3,
+    'facebook': #3b5998,
+    'twitter': #1da1f2,
+    'pinterest': #bd081c
+);
+
+@function color ($key) {
+    @return map-get($theme-colors, $key);
+}
+
+$brand-primary: color('purple');
+$sidebar-primary: color('grey-700');
+$sidebar-secondary: color('grey-800');
+$list-background: color('grey-900');
+$playbar: color('midnight-blue');
+$off-filter-toggle: color('grey-300');
+$border: color('grey-500');
+
+// Gradients
+$button-gradient: linear-gradient(135deg, color('light-blue') 0%, color('light-pink') 100%);
+$button-gradient-hover: linear-gradient(35deg, color('light-blue') 0%, color('light-pink') 100%);
+
+// Font
+$font-body: 'Proxima Nova', sans-serif;
+
+// Transitions
+$transition-default: .2s ease-in-out;
+
+// Temporary Breakpoints
+$large: 992px;
+$xl: 1200px;
+$xxl: 2000px;
+
+@mixin large {
+    @media (min-width: #{$large}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: #{$xl}) {
+        @content;
+    }
+}

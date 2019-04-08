@@ -1,0 +1,158 @@
+.map-container {
+    flex-basis: 75%;
+    overflow: scroll;
+    height: 100%;
+    position: relative;
+
+    background-color: $list-background;
+    color: color('white');
+
+    @include xxl() {
+        flex-basis: 81%;
+    }
+
+    .top-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        z-index: 99;
+        right: 13.5rem;
+        margin-top: 1.5rem;
+        padding-right: 80px;
+    }
+
+    .map-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .map-toggle {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+
+        background: transparent;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: color('white');
+        border-width: 1px;
+
+        text-align: center;
+        line-height: 50px;
+
+        &:hover {
+            cursor: pointer;
+            color: color('black');
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    .list-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        padding-left: 5rem;
+
+        &-pagination {
+            font-size: 2rem;
+        }
+
+        table {
+            width: 85%;
+            margin-top: 175px;
+
+            border-collapse: collapse;
+        }
+
+        th {
+            padding-bottom: 25px;
+            padding-left: 25px;
+
+            opacity: .5;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        td {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+
+            border-width: 1px;
+            border-color: $border;
+            border-bottom-style: solid;
+
+            text-align: left;
+        }
+
+        .gig-list {
+            white-space: nowrap;
+            width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .listTable-dot {
+            width: 11px;
+            border-radius: 50%;
+            height: 11px;
+
+            &-live {
+                background-color: color('pink');
+            }
+
+            &-imminent {
+                background-color: $brand-primary;
+            }
+
+            &-upcoming {
+                background-color: color('cyan');
+            }
+
+            &-future {
+                background-color: color('lilac');
+            }
+        }
+
+        .list-gig-status {
+            padding-left: 5px;
+        }
+    }
+}
+
+.list-gigs-title {
+    :hover {
+        text-decoration: underline;
+    }
+}
+
+.list-gigs-venue {
+    :hover {
+        text-decoration: underline;
+    }
+}
+
+.map {
+    height: 100%;
+
+    button,
+    .gm-svpc,
+    .gm-style-mtc {
+        display: none;
+    }
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 20rem;
+}

@@ -1,0 +1,363 @@
+.form {
+    &__title {
+        margin: 50px 0 50px 0;
+
+        &--padded {
+            padding: 0 25px;
+        }
+    }
+
+    &__subtitle {
+        width: 418px;
+        margin-bottom: 30px;
+
+        opacity: .5;
+    }
+
+    &__label {
+        display: flex;
+
+        color: rgba(color('white'), .5);
+
+        span {
+            margin-left: auto;
+        }
+
+        .label-link {
+            margin-left: auto;
+
+            text-decoration: underline;
+            text-decoration-style: dotted;
+
+            transition: color $transition-default;
+
+            &:hover {
+                color: rgba(color('white'), 1);
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+
+        padding: 0 25px;
+
+        opacity: .5;
+
+        p {
+            &:last-child {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__input {
+        padding: 1rem;
+        margin-top: 1rem;
+
+        border: none;
+        border-radius: 0;
+
+        background-color: color('white');
+
+        &:focus {
+            outline: 2px solid $brand-primary;
+        }
+
+        &--address {
+            padding: 1rem;
+
+            border: none;
+            border-radius: 0;
+
+            background-color: color('white');
+
+            &:focus {
+                outline: 2px solid $brand-primary;
+            }
+        }
+
+        &--time {
+            width: 107px;
+            height: 50px;
+
+            &:first-of-type {
+                margin-left: auto;
+            }
+        }
+
+        &--feedback {
+            height: 211px;
+            margin-top: 1rem;
+            padding: 1rem;
+
+            box-shadow: none;
+
+            &:focus {
+                outline: 2px solid $brand-primary;
+            }
+        }
+
+        &--bio {
+            height: 143px;
+            margin-top: 1rem;
+            padding: 1rem;
+
+            &:focus {
+                outline: 2px solid $brand-primary;
+            }
+        }
+
+        &--date {
+            padding: .8rem;
+        }
+    }
+
+    &__input-group {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 30px;
+        width: 418px;
+
+        &--day {
+            display: flex;
+            align-items: center;
+
+            width: 418px;
+
+            &:first-of-type {
+                margin-top: 20px;
+            }
+
+            span {
+                margin: 0 20px;
+            }
+        }
+
+        &--time {
+            width: 120px;
+            margin-left: auto;
+
+            input {
+                width: 114px;
+                height: 50px;
+            }
+        }
+
+        &--full-name {
+            display: flex;
+        }
+
+        &--name {
+            width: 200px;
+
+            &:first-child {
+                margin-right: 18px;
+            }
+        }
+
+        &--lineup {
+            display: flex;
+        }
+
+        &--social {
+            display: flex;
+            align-items: center;
+
+            .brand {
+                margin-top: 1rem;
+                margin-bottom: 0;
+                padding: 1rem;
+                width: 150px;
+
+                color: color('black');
+                background: color('grey-100');
+            }
+
+            input {
+                width: 295px;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+
+        margin-top: 50px;
+
+        &--padded {
+            padding: 0 25px;
+        }
+    }
+
+    &__artist-email {
+        display: flex;
+        align-items: flex-end;
+
+        margin-bottom: 1rem;
+
+        button {
+            height: 50px;
+            width: 150px;
+            margin-left: auto;
+
+            background: transparent;
+            color: color('white');
+            border-radius: 7px;
+
+            cursor: pointer;
+        }
+
+        input {
+            width: 250px;
+        }
+    }
+
+    select {
+        height: 50px;
+
+        -webkit-appearance: none;
+        background: color('white') url('http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png') no-repeat 385px center;
+    }
+
+    &__error {
+        background-color: color('pink');
+        padding: 10px;
+
+        a {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+    }
+
+    &__success {
+        background-color: color('light-green');
+        padding: 10px;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    &__toggle {
+        margin-top: 1rem;
+    }
+}
+
+.notifications-table {
+    width: 340px;
+    border-collapse: collapse;
+
+    th {
+        padding: 15px 25px;
+
+        text-align: left;
+        opacity: .5;
+        font-weight: 400;
+    }
+
+    td {
+        border-bottom: 1px solid $border;
+        padding: 15px 25px;
+    }
+}
+
+.hours-table {
+    margin: 1rem 0;
+
+    &__day {
+        padding-right: 50px;
+    }
+}
+
+.gigs-table {
+    width: 700px;
+    border-collapse: collapse;
+
+    @include xl() {
+        width: 1108px;
+    }
+
+    th {
+        padding: 15px 25px;
+
+        text-align: left;
+        opacity: .5;
+        font-weight: 400;
+    }
+
+    td {
+        border-bottom: 1px solid $border;
+        padding: 15px 25px;
+
+        &:first-child {
+            width: 190px;
+            max-width: 190px;
+        }
+
+        button {
+            background: none;
+            color: color('white');
+            border: none;
+
+            cursor: pointer;
+        }
+    }
+}
+
+.profile {
+    &__group {
+        width: 400px;
+        margin-top: 20px;
+        padding: 0 25px;
+
+        border-bottom: 1px solid $border;
+
+        p:empty::after {
+            content: '—';
+        }
+    }
+
+    &__genre-list {
+        padding-left: 0;
+
+        line-height: 1.5;
+        list-style: none;
+    }
+}
+
+.react-tabs {
+    &__tab {
+        width: 100px;
+
+        color: color('white');
+        background: none;
+        border: none;
+
+        opacity: .5;
+
+        &--selected {
+            border-bottom: 2px solid $brand-primary;
+
+            opacity: 1;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__tab-list {
+        border-bottom: 1px solid $border;
+
+        text-align: center;
+    }
+}
